@@ -6,14 +6,20 @@
     <title>Whitewater Rafting Adventures</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: slategrey;
+            --secondary-color: slateblue;
+            --accent-1-color: violet;
+            --accent-2-color: steelblue;
+        }
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: slateblue; /* Light background for contrast */
+            background-color: var(--secondary-color);
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: slategrey; /* Primary color */
+            background-color: var(--primary-color);
             color: white;
             text-align: center;
             padding: 20px;
@@ -22,8 +28,16 @@
             font-family: 'Montserrat', sans-serif;
             margin: 0;
         }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
         .button {
-            background-color: slategrey; /* Secondary color */
+            background-color: var(--primary-color);
             color: black;
             padding: 10px 20px;
             border: none;
@@ -31,16 +45,46 @@
             cursor: pointer;
         }
         .button:hover {
-            background-color: violet; /* Accent 1 color */
+            background-color: var(--accent-1-color);
             color: white;
         }
         footer {
-            background-color: steelblue; /* Accent 2 color */
+            background-color: var(--accent-2-color);
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        .hero {
+            position: relative;
+            background-image: url('path-to-your-image.jpg'); /* Replace with your hero image path */
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .hero h1, .hero article {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+        }
+        .hero article {
+            width: 300px;
+            margin-top: 50px;
+        }
+        .hero img {
+            float: right;
+            margin-left: 20px;
+            width: 150px; /* Adjust as needed */
+        }
+        section {
+            margin: 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: black;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -48,16 +92,47 @@
 
 <header>
     <h1>Whitewater Rafting Adventures</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Trips</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
 <main>
-    <h2>Welcome to Your Adventure!</h2>
-    <p>Join us for an unforgettable experience on the river. Whether you're a beginner or an experienced rafter, we have the perfect trip for you!</p>
-    <button class="button">Book Now</button>
+    <div class="hero">
+        <h1>Join the Thrill!</h1>
+        <article>
+            <img src="path-to-hero-image.jpg" alt="Rafting Adventure" /> <!-- Replace with your image -->
+            <p>Experience the rush of whitewater rafting like never before!</p>
+        </article>
+    </div>
+
+    <section>
+        <h2>History</h2>
+        <p>Whitewater rafting has a rich history that dates back to the early 1800s when adventurous souls began navigating rivers for both recreation and exploration.</p>
+    </section>
+
+    <section>
+        <h2>Adventure Awaits You</h2>
+        <div>
+            <img src="path-to-image1.jpg" alt="Adventure 1" />
+            <img src="path-to-image2.jpg" alt="Adventure 2" />
+            <img src="path-to-image3.jpg" alt="Adventure 3" />
+            <img src="path-to-image4.jpg" alt="Adventure 4" />
+            <img src="path-to-image5.jpg" alt="Adventure 5" />
+        </div>
+    </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 Whitewater Rafting Adventures</p>
+    <p>&copy; 2024 Whitewater Rafting Adventures | Student Name</p>
+    <div class="social-media">
+        <a href="#"><img src="path-to-facebook-icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="path-to-twitter-icon.png" alt="Twitter" /></a>
+        <a href="#"><img src="path-to-instagram-icon.png" alt="Instagram" /></a>
+    </div>
 </footer>
 
 </body>
